@@ -54,9 +54,9 @@ def format_datetime(_datetime_bytes):
     else:
         _datetime = _datetime_bytes
 
-        # 可能 '12/30/-1 09:00:57'
-        if '-1' in _datetime:
-            _datetime = _datetime.replace('-1', datetime.now().strftime('%y'))
+    # 可能 '12/30/-1 09:00:57'
+    if '-1' in _datetime:
+        _datetime = _datetime.replace('-1', datetime.now().strftime('%y'))
     try:
         return datetime.strptime(_datetime, "%m/%d/%y %H:%M:%S")
     except Exception as e:
