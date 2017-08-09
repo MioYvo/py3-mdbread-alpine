@@ -2,8 +2,8 @@ FROM python:3.6.1-alpine
 
 # --------------------- install mdbread ---------------------
 COPY mdbtools-0.7.1.zip mdbread /tmp/
-RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
-  apk --no-cache add \
+# RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.ustc.edu.cn/g' /etc/apk/repositories && \
+RUN apk --no-cache add \
     autoconf \
     automake \
     build-base \
