@@ -1,3 +1,15 @@
-# py3-mdbread-alpine
+# GW与设备通信
 
-image for python library mdbread, based on python:3.6.1-alpine
+# 发送数据
+```
+{
+    "agent_name": "123",
+    "device_type": "ersa",
+    "content": {
+        "data": "MjNzc...",      // base64编码过的**binary**文件内容
+        "base_path": "E :\test_data_path",
+        "file_name": "data.txt",
+        "data_source_type": "trend"
+    }
+}
+```
